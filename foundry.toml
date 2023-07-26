@@ -1,0 +1,29 @@
+[profile.default]
+src = "src"
+out = "out"
+test = "test"
+script = "script"
+broadcast = "broadcast"
+libs = ["lib"]
+cache_path = "forge-cache"
+solc = "0.8.19"
+gas_reports = ["*"]
+remappings=["@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/"]
+ffi=true
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
+
+[profile.prod]
+optimize = true
+optimizer_runs = 40000
+via_ir = true
+
+[rpc_endpoints]
+sepolia = "${SEPOLIA_RPC_URL}"
+
+[etherscan]
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
+
+[fmt]
+line_length = 120
+multiline_func_header = "params_first"
+number_underscore="thousands"
