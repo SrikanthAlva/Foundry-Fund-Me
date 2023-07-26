@@ -48,6 +48,7 @@ cast send 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 "store(uint256)" 123 --rpc-
 cast call --help
 cast call 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 "retrieve()" --rpc-url $RPC_URL
 cast --to-base 0x000000000000000000000000000000000000000000000000000000000000007b dec
+cast sig "fund()" => creates function selector for us
 
 -------------
 source .env
